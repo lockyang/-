@@ -1,3 +1,4 @@
+// 节流函数
 let throttle = function ( fn, interval = 500) {
   let __self = fn,
       timer,
