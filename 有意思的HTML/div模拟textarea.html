@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>constructor-node</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #textarea {
+        width:300px;
+        border:1px solid #ccc;
+        min-height:150px;
+        max-height:300px;
+        overflow: auto;
+        font-size: 14px;
+        outline: none;
+    }
+    #textarea:empty:before {
+        content: attr(placeholder);
+        color: #bbb;
+    }
+    #textarea:focus:before {
+        content: '';
+    }
+    </style>
+</head>
+<body>
+<!--
+    contenteditable=""
+    contenteditable="events"
+    contenteditable="caret"
+    contenteditable="plaintext-only"
+    contenteditable="true"
+    contenteditable="false"
+-->
+<div id="textarea" contenteditable="plaintext-only" placeholder="123"></div>
+
+<script>
+    (function () {
+        var obj = document.querySelector('#textarea');
+        obj.onpaste = function (event) {
+            console.log(event)
+        }
+    })()
+</script>
+</body>
+</html>
