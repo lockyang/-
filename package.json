@@ -8,7 +8,7 @@
     "ramda": "^0.24.1"
   },
   "devDependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "mockjs": "^1.0.1-beta3"
   },
   "scripts": {
